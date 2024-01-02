@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>from 구성 태그!</title>
+</head>
+<body>
+    <form>
+        <!-- 라벨과 인풋을 합치면 웹접근성에 도움이 됨 -->
+        <label>
+        id: <input type="text" placeholder="id를 입력해주세요!"/>            
+        <!-- placeholder사용자에게 설명 -->
+        </label>
+
+        <label for="pw">
+            password: <input type="password" />
+        </label>
+        <input type="password" />
+
+        
+        <br />
+        email: <input type="email" value="allie">
+        <!-- value="allie실제로 값이 들어가 있는것 -->
+        <br />
+
+        <input type="button" value="로그인"/>
+
+        <!-- submit 새로고침이 됨, 제출 -->
+        <input type="submit" value="로그인"/>
+
+        <!-- submit과 같음, 스타일링일 더 할수 있음 -->
+        <button><span style="color:blue">로</span>그인</button> 
+
+
+
+        <input type="color">
+        <input type="file">
+        <input type="number">
+        <input type="date">
+
+        <!-- 여러줄 쓸수있음 -->
+        <textarea cols="30" rows="10"></textarea>
+<hr />
+
+       <h5>다음중 인풋의 타입이 다른것은?(모두고르시오)</h5> 
+       <label> <input type="checkbox" disabled> alt</label>
+       <label> <input type="checkbox"> text</label>
+       <label> <input type="checkbox"> img</label>
+       <label> <input type="checkbox"> click</label>
+       <label> <input type="checkbox"> date</label>
+<!-- 라벨로 글자와 박스를 세트로 묶어서, 글자를 눌러도 체크가 됨 -->
+
+
+<h5>다음 중 img 태그의 속성인 것은?</h5>
+<!-- 하나의 그룹으로 묶으면 하나만 선택 가능 -->
+
+<!-- 라벨의 for는 id 와 같아야함 -->
+<input type="radio" name="img" id="alt" />
+<label for="alt">alt</label>
+
+<input type="radio" name="img" id="bread"/>
+<label for="bread">bread</label>
+
+<input type="radio" name="img" id="href"/>
+<label for="href">href</label>
+
+<input type="radio" name="img" id="mouse"/>
+<label for="mouse">mouse</label>
+
+<input type="radio" name="img" id="dragon" disabled/>
+<label for="dragon">dragon</label>
+<!-- disabled= 선택할수없음 -->
+
+<br />
+
+<select>
+
+<optgroup label="빨간꽃">
+    <option value="장미" disabled>장미</option>
+    <option value="동백꽃">동백꽃</option>
+    <option value="튤립">튤립</option>
+</optgroup>
+
+<optgroup label="하얀꽃">
+    <option value="벚꽃">벚꽃</option>
+    <option value="매화">매화</option>
+</optgroup>
+
+
+</select>
+
+    </form>
+</body>
+</html>
