@@ -1,0 +1,183 @@
+.d-block {
+    display: block;
+    background-color: pink;
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    padding: 15px;
+    margin: 20px;
+}
+
+/*요소마다 마진이 적용되어있을경우 제일큰 마진을 가져감 */
+
+
+.d-inline {
+    display: inline;
+    background-color: skyblue;
+    width: 1000px;
+    height: 200px;
+    /* padding: 15px; */
+    /* 가로 패딩만 쓰기, 세로는 요소끼리 겹침 */
+    /* margin: 20px; */
+    /* 가로만 적용 */
+}
+
+
+.d-inline-block {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-color: yellowgreen;
+    border: 1px solid plum;
+    padding: 15px;
+    margin: 20px;
+    /* 옆으로 쌓이고 가로 세로 적용됨 */
+    /* 마진이 상쇄되지 않고 합해짐 *2 */
+}
+
+
+.parent {
+    width: 400px;
+    /* width300px로 바꾸면 min 400px 유지
+    ,max는 같이 줄어듦 */
+
+    /* 
+    width를 500px로 바꾸면 max는 400유지, 
+    min은 같이 늘어남 */
+    height: 200px;
+}
+
+.parent>.min {
+    min-width: 400px;
+    /* 이상 */
+    height: 100px;
+    background-color: orange;
+}
+
+.parent>.max {
+    max-width: 400px;
+    /* 이하 */
+    height: 100px;
+    background-color: blueviolet;
+}
+
+.box {
+    background-color: skyblue;
+    border: 1px solid burlywood;
+}
+
+.box-px {
+    width: 50px;
+    height: 50px;
+
+}
+
+.box-vw {
+    width: 50vw;
+    height: 50vh;
+}
+
+
+.box-per {
+    width: 50%;
+    /* height: 50%;
+    있던 없던 똑같 */
+}
+
+.rem {
+    font-size: 2rem;
+}
+
+.em {
+    font-size: 2m;
+}
+
+
+.square {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    /* 호버했을때 손가락 모양으로 바뀜 */
+    background-color: rgb(250, 197, 129);
+}
+
+.border {
+    background-color: rgb(185, 255, 252);
+    /* border: 3px solid red; */
+    /* 굵기 모양 색깔 */
+    border-color: blueviolet orange blue;
+    /* 위 양옆 아래, 시계방향 */
+    border-style: dotted;
+    border-width: 3px;
+    /* 1픽셀 솔리드 논 */
+    border-right-width: 5px;
+}
+
+.rounded {
+    background-color: #beffc9;
+    /* border-radius: 50px; */
+    /* 가로세로값의 50%값 쓰면 동그라미 */
+    /* border-radius: 5px 10px 30px 40px; */
+    /* 왼쪽 위 기준 시계방향 */
+
+    /* border-radius: 5px 20px 40px; */
+    /* 왼쪽 위1, 왼쪽 오/왼아, 오른쪽 아래 */
+
+    border-radius: 5px 40px;
+
+}
+
+
+.box-sizing {
+    padding: 20px;
+    border: 15px solid red;
+    background-color: orange;
+}
+
+.content-box {
+    box-sizing: content-box;
+}
+
+.border-box {
+    box-sizing: border-box;
+}
+
+
+
+.d-none {
+    display: none;
+    /* 자리도 없어지고 속성도 없어짐 */
+    background-color: red;
+}
+
+.invisible {
+    visibility: hidden;
+    /* 히든은 속성이 사라짐, 자리는 차지 */
+    background-color: orangered;
+}
+
+.opacity-0 {
+    opacity: 0.5;
+    /* 자리 o,속성 o */
+    background-color: tomato;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.overflow-scroll {
+    overflow: scroll;
+    /* 아무내용이 없어도 스크롤이 생김 */
+}
+
+.overflow-auto {
+    overflow: auto;
+}
+
+
+.overflow-visible {
+    overflow: visible;
+    /* 다 넘치게 보여주는 것 */
+}

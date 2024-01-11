@@ -1,0 +1,51 @@
+.div1 {
+    height: 95vh;
+    width: 95vw;
+    position: absolute;
+}
+
+.div2 {
+    width: 100px;
+    height: 100px;
+    background-color: bisque;
+    border-radius: 50%;
+
+
+    position: relative;
+
+    animation-name: in;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+}
+
+@keyframes in {
+
+    0% {
+        top: 0vh;
+        left: 0vw;
+    }
+
+    25% {
+        top: 0vh;
+        left: 90vw;
+
+    }
+
+    50% {
+        top: 80vh;
+        left: 90vw;
+
+    }
+
+    75% {
+        top: 80vh;
+        left: 0vw;
+
+    }
+
+    100% {
+        top: 0vh;
+        left: 0vw;
+    }
+}

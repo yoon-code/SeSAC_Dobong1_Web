@@ -1,0 +1,39 @@
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .background-container {
+        position: relative;
+        width: 800px;
+        height: 500px;
+        background-color: skyblue;
+        overflow: hidden;
+    }
+
+    .div-container {
+        position: absolute;
+    }
+
+    .div1 {
+        top: 0;
+        left: 0;
+        transform: translateX(-100%);
+    }
+
+    .div2 {
+        top: 30px;
+        left: 100px;
+    }
+
+    .div3 {
+        top: 0;
+        left: 0;
+        transform: translateY(-100%);
+    }
+
+    .ryan-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }

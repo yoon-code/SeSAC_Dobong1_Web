@@ -1,0 +1,63 @@
+body {
+    height: 2000px;
+}
+
+.box {
+    display: inline-block;
+    width: 400px;
+    height: 500px;
+    border: 1px solid black;
+}
+
+.background {
+    background-color: palegreen;
+
+    /* background 단축 속성 */
+    /* background: 컬러, 이미지, 리핏, 포지션/사이즈; =순서 */
+
+    /* background: linear-gradient(90deg, black, white, orange); */
+    background: linear-gradient(to bottom, black, white, orange);
+    /* 디그리 기울기 */
+}
+
+.background-img {
+    /* 백그라운드 리핏 */
+    background-image: url('./img/small_img.png');
+    background-repeat: repeat;
+    background-repeat: repeat-x;
+    background-repeat: repeat-y;
+    background-repeat: no-repeat;
+
+    /* 백그라운드 포지션 */
+    /* 센터, 바텀, 레프트, 라이트, 탑의 키워드로 설정 가능 */
+    background-position: center;
+    background-position: center top;
+    /* 위로가는데가운데 정렬 */
+
+    background-position: 100px 200px;
+    /* x축 y축 */
+
+    background-position: 100px;
+    /* 하나만 쓰면 왼쪽, 위 */
+
+    /* 백그라운드 사이즈 */
+    background-position: 0px 0px;
+    background-size: 50px;
+    /* 가로 50px */
+    background-size: 90px 50px;
+    /* 가로 세로 */
+
+    /* 컨테인 */
+    background-size: contain;
+    /* 이미지가장크게 컨텐츠 모두 덮음, 원본비율 유지 */
+    background-size: cover;
+    /* 이미지가 가장 작아도 컨텐츠 모두 덮음,원본비율 유지 */
+
+    /* background-attachment */
+    background-attachment: fixed;
+    /* 뷰포트 기준으로 이미지 고정 */
+    background-color: pink;
+
+
+
+}

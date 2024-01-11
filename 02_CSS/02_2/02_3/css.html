@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>가상요소 선택자 종합실습</title>
+    <style>
+        form {
+            width: 400px;
+        }
+
+        /* focus */
+        textarea {
+            width: 100%;
+            color: #858585;
+        }
+
+        textarea:focus {
+            background-color: rgba(255, 170, 145, 0.729);
+
+        }
+
+        /* checked */
+        .color-checkbox-red:checked+label {
+            background-color: red;
+        }
+
+        .color-checkbox-blue:checked+label {
+            background-color: blue;
+        }
+
+        .color-checkbox-yellow:checked+label {
+            background-color: yellow;
+        }
+
+
+        /* active */
+        button {
+            float: right;
+            padding: 5px 15px;
+            background-color: #f96666;
+            color: white;
+            font-size: 17px;
+            border-radius: 10px;
+            border: none;
+        }
+
+        h3:hover {
+            background-color: black;
+            color: white;
+        }
+
+        button:hover {
+            background-color: #ddd;
+            color: #f96;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>건의 사항을 적어주세요!</h3>
+    <form>
+        <textarea rows="10">건의 사항 🎈</textarea>
+
+        <input type="checkbox" name="color" id="red" class="color-checkbox-red" />
+        <label for="red">빨강</label>
+
+        <input type="checkbox" name="color" id="blue" class="color-checkbox-blue" />
+        <label for="blue">파랑</label>
+
+        <input type="checkbox" name="color" id="yellow" class="color-checkbox-yellow" />
+        <label for="yellow">노랑</label>
+
+
+        <button>제출</button>
+    </form>
+</body>
+
+</html>

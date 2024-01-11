@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap');
+/* 임포트는 항상 맨 위에 */
+/* font-family: 'Hi Melody',sans-serif; */
+
+/* 눈누 */
+@font-face {
+    font-family: 'Cafe24Moyamoya-Face-v1.0';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/Cafe24Moyamoya-Face-v1.0.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.font-link {
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+.font-import {
+    font-family: 'Hi Melody', sans-serif;
+}
+
+.noonnu {
+    font-family: 'Cafe24Moyamoya-Face-v1.0', serif;
+}
+
+
+.sentencse {
+    font-weight: 700;
+    /* 700과 볼드는 같음 */
+    font-size: 16px;
+    /* font-size: 1rem;
+    font-size: 1em; */
+    /* 전부 같은 사이즈 */
+
+    text-align: left;
+    /* text-align: center;
+    text-align: right; */
+
+    text-decoration: line-through;
+    text-decoration: underline;
+    text-decoration: overline;
+    text-decoration: none;
+
+    line-height: 32px;
+    /* 세로 기준으로 중앙정렬 */
+}
+
+
+a {
+    text-decoration: none;
+    color: black;
+    /* 색깔 지정 방법 */
+    /* 1. 색깔 이름 작성: red, pink */
+    /* 2.rgb (-,-,-) 0~255까지 숫자가 들어올수있음 */
+    /* #------ 16진수로 이루어진 rgb값 */
+
+    color: rgb(0, 0, 0);
+    color: rgba(0, 0, 0, 0.5);
+    color: #000;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css 적용 방법</title>
+    <style>
+        p {
+            background-color: pink;
+            color: skyblue;
+        }
+
+        div {
+            background-color: yellow;
+        }
+    </style>
+    <link rel="stylesheet" href="./css_start.css">
+</head>
+
+<body>
+    <h1>css 적용방법</h1>
+    <div style="background-color: antiquewhite;">인라인 방식</div>
+    <div style="background-color: antiquewhite;">인라인 방식</div>
+    <div style="background-color: antiquewhite;">인라인 방식</div>
+    <div style="background-color: blueviolet;">인라인 방식</div>
+    <!-- 시맨틱처럼, 태그에 스타일속성, 세미콜론으로 구분 -->
+
+    <p>내장 스타일태그방식</p>
+    <p>내장 스타일태그방식</p>
+    <p>내장 스타일태그방식</p>
+
+    <!-- 반드시 헤더 태그 안에, 하나 변경하면 전부 적용이 됨 -->
+    <ul>
+        <li>외부스타일 시트</li>
+        <li>방식</li>
+    </ul>
+</body>
+
+</html>

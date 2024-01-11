@@ -1,0 +1,200 @@
+.container {
+    max-width: 1000px;
+    height: 400px;
+    margin: 0 auto;
+    /* 위아래 0, 양옆 오토 */
+    background-color: #333;
+
+
+    /* flex-direction
+    row 좌>우정렬
+    row-reverse 우>좌 정렬
+    column 상>하 정렬
+    column-reverse 하>상 정렬
+     */
+
+    /* 둘이 세트 */
+    display: flex;
+    /* 이것만 정렬해도 가로 정렬됨 */
+    /* flex-direction: row; */
+    /* flex-direction: row-reverse; */
+    /* flex-direction: column; */
+    /* flex-direction: column-reverse; */
+
+    /* flex-wrap */
+    /* flex-wrap: nowrap; */
+    flex-wrap: wrap;
+
+    /* justify-content, 주축의 정렬방법 */
+    /* flex-start: 아이템을 시작점 기준으로 나열 */
+    /* flex-end: 아이템을 끝점 기준으로 나열 /* flex-direction: row-reverse;랑 다름*/
+    /* center 중앙정렬, 센터후 간격은 마진으로 줌 */
+    /* space-between:처음과  마지막 아이템을 양끝에 붙이고
+    나머지 영역을 공평하게 가져감 */
+
+    /* space-around: 첫 스타트부터 첫 아이템의 간격, 아이템끼리의 간격,
+    마지막 아이템부터 끝까지 간격*2=아이템끼리의 간격 1:2:2:1 */
+
+    /* space-evenly:아이템들의 모든 영역을 공평하게 나눔 1:1:1:1 */
+
+
+    /* justify-content: flex-start; */
+    /* justify-content: flex-end; */
+    /* justify-content: center; */
+    /* justify-content: space-between; */
+    /* justify-content: space-around; */
+    /* justify-content: space-evenly; */
+
+    /* align-items 한줄 교차축 정렬
+    flex-direction이 row일때 : 교차축 수직
+    flex-direction이 col일때 : 교차축 수평 */
+    /* align-items: stretch; */
+    /* align-items: flex-start; */
+    /* align-items: flex-end; */
+    /* align-items: center; */
+
+
+    /* align-content 여러줄 교차축 정렬
+    flex-wrap이 무조건 있어야함(기본값-> stretch)
+    */
+
+    /* align-content: flex-start; */
+    /* align-content: flex-end; */
+    /* align-content: center; */
+    /* align-content: space-between; */
+    /* align-content: space-around; */
+    /* align-content: space-evenly; */
+}
+
+.items {
+    width: 100px;
+    height: 100px;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 100px;
+}
+
+.item1 {
+    background-color: aliceblue;
+}
+
+.item2 {
+    background-color: antiquewhite
+}
+
+.item3 {
+    background-color: aqua;
+}
+
+.item4 {
+    background-color: blue;
+}
+
+.item5 {
+    background-color: blueviolet;
+}
+
+
+
+/* 실습1 */
+
+.container2 {
+    width: 500px;
+    height: 500px;
+    background-color: blueviolet;
+    /* 세로방향 */
+    /* display: flex; */
+    /* justify-content: flex-start; */
+    /* 시작점 */
+    /* justify-content: flex-end; */
+    /* 끝점 */
+}
+
+.item {
+    width: 100px;
+    height: 100px;
+
+}
+
+.items1 {
+    background-color: skyblue;
+}
+
+.items2 {
+    background-color: pink;
+}
+
+.items3 {
+    background-color: orange;
+}
+
+.container3 {
+    width: 500px;
+    height: 500px;
+    background-color: orange;
+
+    display: flex;
+    /* 컨테이너 한줄 */
+    flex-wrap: wrap;
+    /* 컨테이너 두줄 */
+}
+
+.it {
+    width: 100px;
+    height: 100px;
+}
+
+.ite1,
+.ite3,
+.ite5,
+.ite7 {
+    background-color: skyblue;
+}
+
+.ite2,
+.ite4,
+.ite6,
+.ite8 {
+    background-color: pink;
+}
+
+
+/* 실습3 flex-wrap */
+
+.container4 {
+    max-width: 500px;
+    height: 500px;
+    background-color: orange;
+
+    /* 한줄 세로 */
+
+    display: flex;
+    /* 한줄 가로 */
+
+    flex-wrap: wrap;
+    /* 두줄 가로 */
+
+    align-content: center;
+    /* 뭉쳐서 가로 */
+
+    /* 뭉쳐서 세로 */
+
+
+    /* flex줄에 가로 */
+    /* flex줄에 세로 */
+
+}
+
+.ite10,
+.ite12,
+.ite14,
+.ite16 {
+    background-color: skyblue;
+}
+
+.ite11,
+.ite13,
+.ite15,
+.ite17 {
+    background-color: pink;
+}
