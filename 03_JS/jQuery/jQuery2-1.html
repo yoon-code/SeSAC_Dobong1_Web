@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery 실습1</title>
+    <!-- jQueru CDN 불러오기 -->
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script>
+        // name이라는 파라미터를 받고있음
+        function changeImg(name) {
+            console.log('name: ', name);
+            $("img").attr("src", `./img/${name}.jpg`)
+        }
+    </script>
+</head>
+
+<body>
+    <img src="./img/defaultImg.jpg" alt="과일" width="230px" height="200px" />
+    <br />
+    <button onclick="changeImg('apple')">사과</button>
+    <button onclick="changeImg('banana')">바나나</button>
+    <button onclick="changeImg('grape')">포도</button>
+    <button onclick="changeImg('peach')">복숭아</button>
+</body>
+
+</html>

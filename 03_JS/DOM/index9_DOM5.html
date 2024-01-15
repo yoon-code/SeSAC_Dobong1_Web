@@ -60,13 +60,33 @@
             div2.style.backgroundColor = 'violet';
         })
 
-        // focus 클랙되었을때
-        let input = document.querySelector('.input');
+        // focus 클릭되었을때
+        let input = document.querySelector('input');
 
         input.addEventListener('focus', function () {
             console.log('input에 focus 이벤트 발생!');
         })
 
+
+        //키보드
+        input.addEventListener('keydown', function (e) {
+            console.log('e: ', e);
+            console.log('e.target ', e.target);
+            console.log('e.target.velue ', e.target.value);
+            console.log('keydown이벤트');
+        })
+
+        //스크롤 이벤트
+        let container = document.querySelector('.container');
+
+        // scroll이 없을 때는 실행 x
+        container.addEventListener('scroll', function () {
+            console.log('컨테이너에 scroll이벤트 발생');
+        });
+
+        window.addEventListener('scroll', function () {
+            console.log('컨테이너에 scroll이벤트 발생');
+        });
 
 
     </script>

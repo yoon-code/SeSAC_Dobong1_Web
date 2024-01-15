@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 제이쿼리 사용 코드-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <title>jQuery1</title>
+
+    <script>
+        function setValue() {
+            //input 태그의 value 값을 설정
+            $('input').val('setting');
+        }
+
+        function getValue() {
+            //input 태그의 value 값을 가져옴
+            alert($('input').val());
+        }
+
+        function changeStyle() {
+            $('span').css('font-size', '28px');
+        }
+
+        function changeAttribute() {
+            $('input').attr('placeholder', 'name');
+            //js =setAttribute('placeholder', 'name')
+        }
+
+
+        function changeText() {
+            $('span').text('jQuery text!');
+        }
+
+
+        function changeHtml() {
+            $('p').html('<h3>jQuery Html</h3>');
+            //ineerHTML
+        };
+    </script>
+</head>
+
+<body>
+    <input type="text">
+    <button onclick="setValue()">setValue</button>
+    <button onclick="getValue()">getValue</button>
+
+
+    <br>
+    <span>안녕</span>
+    <button onclick="changeStyle()">changeStyle</button>
+    <button onclick="changeAttribute()">changeAttribute</button>
+    <button onclick="changeText()">changeText</button>
+    <button onclick="changeHtml()">changeHtml</button>
+
+
+    <p>p태그</p>
+</body>
+
+</html>
