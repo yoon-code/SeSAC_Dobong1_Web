@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 제이쿼리 사용 코드(cdn)-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+
+    <style>
+        .m {
+            text-align: center;
+            width: 700px;
+            height: 700px;
+        }
+
+        .item1 {
+            font-size: 30px;
+            color: green;
+            text-align: center;
+        }
+
+        td:first-child {
+            color: red;
+        }
+
+        td:last-child {
+            color: blue;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <label>날짜: <input type="text" class="in1" /></label><br>
+    <label>내용: <input type="text" class="in2" /></label><br>
+    <button>작성</button>
+
+    <table class="m">
+
+        <div class="item1"> 2022년 1월</div>
+
+        <tr>
+            <td>
+                日
+            </td>
+
+            <td>
+                月
+            </td>
+
+            <td>
+                火
+            </td>
+
+            <td>
+                水
+            </td>
+
+            <td>
+                木
+            </td>
+
+            <td>
+                金
+            </td>
+
+            <td>
+                土
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+
+            </td>
+
+            <td>
+
+            </td>
+
+            <td>
+
+            </td>
+
+            <td>
+
+            </td>
+
+            <td>
+
+            </td>
+
+            <td>
+                1
+            </td>
+
+            <td>
+                2
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+                3
+            </td>
+
+            <td>
+                4
+            </td>
+
+            <td>
+                5
+            </td>
+
+            <td>
+                6
+            </td>
+
+            <td>
+                7
+            </td>
+
+            <td>
+                8
+            </td>
+
+            <td>
+                9
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+                10
+            </td>
+
+            <td>
+                11
+            </td>
+
+            <td>
+                12
+            </td>
+
+            <td>
+                13
+            </td>
+
+            <td>
+                14
+            </td>
+
+            <td>
+                15
+            </td>
+
+            <td>
+                16
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+                17
+            </td>
+
+            <td>
+                18
+            </td>
+
+            <td>
+                19
+            </td>
+
+            <td>
+                20
+            </td>
+
+            <td>
+                21
+            </td>
+
+            <td>
+                22
+            </td>
+
+            <td>
+                23
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+                24
+            </td>
+
+            <td>
+                25
+            </td>
+
+            <td>
+                26
+            </td>
+
+            <td>
+                27
+            </td>
+
+            <td>
+                28
+            </td>
+
+            <td>
+                29
+            </td>
+
+            <td>
+                30
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+                31
+            </td>
+
+            <td>
+
+            </td>
+
+            <td>
+
+            </td>
+
+            <td>
+
+            </td>
+
+            <td>
+
+            </td>
+
+            <td>
+
+            </td>
+
+            <td>
+
+            </td>
+
+        </tr>
+    </table>
+
+
+    <script>
+        //달력 날짜 클릭시 input에 값채워지기
+        //내용입력후 등록하면 해당 날짜에 내용 추가
+
+
+        //this를 기억하기 위한 전역변수
+
+        let target;
+
+        //날짜 클릭
+
+        $('td>p').on(click, function () {
+            console.log(this);
+            //날짜만 가져오려면 this의 text()사용
+            console.log($(this).text());
+        })
+
+        //날짜 input 선택
+        $('.in1').val($(this).text());
+
+        //taget에 this 기억해두기
+        target = this;
+
+
+        function write() {
+            let content = $('in2').val();
+
+            //요소 추가
+
+            $(target).parent().append(`<span> ${in2} </span> <br />`)
+            //타겟은 p태그 
+
+            //초기화
+            $('.in1').val('');
+            $('.in2').val('');
+        }
+
+
+        // $("td").on("click", function () {
+        //     console.log(this);
+        //     console.log($(this.text));
+        //     $('.in1').val(($(this.text)))
+
+        //     $('.in2').keydown(function (e) {
+        //         console.log(e.key);
+        //     })
+        //     $('.in2').val(e.key)
+        // })
+
+
+
+
+    </script>
+</body>
+
+</html>

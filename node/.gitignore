@@ -1,0 +1,5 @@
+/node_modules 
+# 회색 표시가 됨 -> 적용완료
+
+*-lock.json
+# lock.json이면 다 추적 x

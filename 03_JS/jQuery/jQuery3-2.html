@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 제이쿼리 사용 코드(cdn)-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+
+    <!-- 클래스 조작 (cdn) -->
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"
+        integrity="sha256-eTyxS0rkjpLEo16uXTS0uVCS4815lc40K2iVpWDvdSY=" crossorigin="anonymous"></script>
+    <!-- $( 선택자 ).switchClass(“클래스명1”, “클래스명2”, 시간)-->
+
+    <!-- TODO1: jQuery CDN 불러오기 -->
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+        }
+
+        div:hover {
+            cursor: pointer;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .orange {
+            background-color: orange;
+        }
+
+        .yellow {
+            background-color: yellow;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        .blue {
+            background-color: blue;
+        }
+
+        .purple {
+            background-color: purple;
+        }
+    </style>
+    <script>
+        let colors = ['red', 'orange', 'yellow', 'green', 'blue', 'purple'];
+
+        // TODO2: changeColor 함수 내부 작성
+
+
+        //순서가 어떻게 돌아가는지
+
+        //레드일땐 오렌지로-> 오렌지->옐로우로 ... 퍼플->레드로 끊기지 않고 돌아감
+
+        //1. div 요소 선택(class를 알아야 하니까) -> hasClass()
+        //2. red라는 클래스가 있다면 if안에 실행 
+
+
+
+        // function changeColor() {
+        //     if ($('div').hasClass('red')) {
+        //         // red가 있다면 트루로 명령어 실행
+        //         //     레드를 오렌지로
+
+        //         $('div').switchClass('red', 'orange', 5);
+        //     }
+        //     else if ($('div').hasClass('orange')) {
+        //         $('div').switchClass('orange', 'yellow', 5);
+        //     }
+        //     else if ($('div').hasClass('yellow')) {
+        //         $('div').switchClass('yellow', 'green', 5);
+        //     }
+        //     else if ($('div').hasClass('green')) {
+        //         $('div').switchClass('green', 'blue', 5);
+        //     }
+        //     else if ($('div').hasClass('blue')) {
+        //         $('div').switchClass('blue', 'purple', 5);
+        //     }
+        //     else $('div').switchClass('purple', 'red', 5);
+        // }
+
+
+        //2. 방법2 colors 배열 사용
+        function changeColor(colors) {
+            // 현재 클래스 : red-> red index:0 -> colors[0], orange: colors[1]
+            //#('div').switchClass(colors[i], colors[i+1])
+            //=> i를 알아야함
+
+            let nowClass = $('div').attr('class');
+            console.log(nowClass);
+            let i = colors.indexOf(nowClass); //0~5
+
+
+            //퍼플일때, 마지막 인덱스일때는
+            if (i == colors.length - 1)
+                $('div').switchClass(colors[i], colors[0]) //다시 처음으로 돌아가게
+            else
+                $('div').switchClass(colors[i], colors[i + 1])
+        }
+
+    </script>
+</head>
+
+<body>
+    <div class="red" onclick="changeColor();"></div>
+</body>
+
+</html>
