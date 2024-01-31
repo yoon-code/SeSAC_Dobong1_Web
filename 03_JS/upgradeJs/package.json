@@ -1,0 +1,4 @@
+{
+    "type": "module",
+    "__comment__": "주석 es6 모듈로 진행할때는  type: module를 명시해야합니다"
+}

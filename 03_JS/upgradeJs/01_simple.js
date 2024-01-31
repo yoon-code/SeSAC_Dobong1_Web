@@ -24,6 +24,8 @@ let temp;
 temp = x2;
 x2 = y2;
 y2 = temp;
+console.log(x2, y2);
+
 
 // 2. 객체의 구조분해 할당
 
@@ -56,7 +58,7 @@ for (let l of arr3) {
     console.log(l);
 }
 
-console.log(...arr3);
+console.log(...arr3, ...arr4);
 
 //[1,2,3,4,5,'a','b','c']
 
@@ -90,8 +92,14 @@ const me2 = {
     },
 };
 
+
+
+console.log(me1);
+console.log(me2);
 let me = { ...me1, ...me2 }
+
 console.log(me);
+
 
 // 키값이 같다면 뒤의것이 나오고 나머지는 합쳐짐
 
@@ -118,8 +126,11 @@ const obj2 = {
     key5: 'value5',
 };
 
-cosnt = { title: a, content: b, num: c, ...obj3 } = obj2;
+cosnt = { title: a, content: b, number: c, ...obj3 } = obj2;
 console.log(obj3);
+console.log(a);
+console.log(b);
+console.log(c);
 // ...obj3 =나머지는 obj3로 들어감
 
 console.log('-----------------');

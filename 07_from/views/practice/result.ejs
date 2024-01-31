@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>폼 전송 결과(실습)</title>
+    <style>
+      span {
+        /* color: coral; */
+        font-weight: 700;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      li {
+        border: 1px solid #bbb;
+        box-shadow: 0px 0px 5px #c8c8c8c8;
+        padding: 0.5rem;
+        margin: 0.5rem 0;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1><%= title%>요청 확인하기</h1>
+    <div><span><%=uersInfo.name%></span>님 환영합니다!</div>
+
+    <ul>
+      <li>성별: <%=uersInfo.gender%></li>
+      <li>
+        생년월일: <%=uersInfo.year%>/<%=uersInfo.month%>/<%=uersInfo.date%>
+      </li>
+      <li>관심사: <%=uersInfo.favorite%></li>
+    </ul>
+
+    <%if (addInfo){%>
+    <h4>다른 태그 작성해보기</h4>
+    <p>좋아하는 색깔:<span class="color"><%=uersInfo.color%></span></p>
+
+    <p>좋아하는 숫자:<%=uersInfo.number%></p>
+    <p>다짐 한마디:<%=uersInfo.comment%></p>
+    <%}%>
+
+    <script>
+      // 이것도 안됨
+      // p{
+      //   color:<%=uersInfo.color%>
+      // }
+
+      document.addEventListener("DOMContntedLoaded", () => {
+        const color = document.querySelector(".color");
+        color.style.color = "<%=uersInfo.color%>";
+      });
+    </script>
+    <!-- ----------------------------- -->
+    <!-- ----------------------------- -->
+    <!-- ----------------------------- -->
+    <!-- 
+    <div>성별은 <span><%=uersInfo.s%></span>이군요!!</div>
+    <div>
+      생년월일은 <span><%=uersInfo.y,uersInfo.m,uersInfo.d%></span>이군요!!
+    </div>
+    <div>
+      관심사는
+      <span><%=uersInfo.h1 || uersInfo.h2|| uersInfo.h3%></span>이군요!!
+    </div> -->
+
+    <a href="/"> 홈으로 이동하기</a>
+    <%# ejs 주석 처리 방법 %>
+  </body>
+</html>
