@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- head.ejs 인클루드 -->
+    <%-include('./include/head')%>
+    <style>
+      h1,
+      div {
+        text-align: center;
+      }
+
+      p {
+        white-space: pre-line;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- header.ejs 인클루드 -->
+    <%-include('./include/header')%>
+
+    <!-- contentID: 2,
+    title: "글제목2",
+    content: "글내용2",
+    img: null, //null or path(string) -->
+
+    <h1><%=title%></h1>
+    <p><%=content%></p>
+    <%if(img){%>
+    <img src="/<%=img%>" alt="<%=contentID%> 번글 이미지" width="300" />
+    <!-- contentID not defind -->
+    <%}%>
+
+    <!-- /r CR /n LF  -->
+  </body>
+</html>

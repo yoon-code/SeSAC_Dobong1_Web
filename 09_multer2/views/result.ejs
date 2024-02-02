@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>마이페이지</title>
+    <link rel="stylesheet" href="/public/css/mypage.css" />
+  </head>
+  <body>
+    <h1><%= userInfo.name %>님 마이페이지</h1>
+
+    <img src="/<%=src%>" alt="프로필사진" style="width: 300px" /><br /><br />
+
+    <p>아이디: <%= userInfo.id %></p>
+    <br />
+    <p>비밀번호: <%= userInfo.pw %></p>
+    <br />
+    <p>이름: <%= userInfo.name %></p>
+    <br />
+    <p>나이: <%= userInfo.age %></p>
+    <br />
+  </body>
+</html>
