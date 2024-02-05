@@ -5,7 +5,7 @@ const multer = require("multer");
 const app = express();
 const PORT = 8001;
 
-// temp DB 임시데이터 배열형태로 만들어서 화면에 띄워주는 작업
+// tempDB 임시데이터 배열형태로 만들어서 화면에 띄워주는 작업
 
 let tempDB = [
   {
@@ -119,9 +119,8 @@ res.send(), res.end(), res.write() =응답이 끝나지 않음, res.render(),...
 2. post: Create 새로운 정보를 '입력','추가'할 때
 3. put& patch: 수정 Update 수정관련 메소드 put 전체 수정, patch일부수정...post로도 수정 가능
 4. delete : 삭제
-
-
 */
+
 app.get("/", function (req, res) {
   res.render("index.ejs", {
     user: userID,
@@ -150,6 +149,7 @@ app.get("/content/:contentID", (req, res) => {
   //   console.log(req.params); //{ contentID: '1' }
   //   req.params.contentID
   const { contentID } = req.params;
+
   //   tempDB의 contentID와 params로 들어오는 contentID 비교
   const isContent = tempDB.filter(
     (obj) => obj.contentID === Number(contentID)
